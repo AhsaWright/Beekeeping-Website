@@ -1,9 +1,15 @@
+html, body{
+    padding: 20px;
+    margin: 0%;
+}
 body {
     font-family: Arial, sans-serif;
     background-color: #fffbee;
     color: #333;
     margin: 0;
     padding: 0;
+    display: flex;
+    flex-direction: column;
 }
 
 header {
@@ -16,7 +22,20 @@ header {
 }
 
 main {
-    padding-bottom: 150px; /* Adjust the value as needed */
+    padding-bottom: 100px;
+}
+
+.card {
+    background-color: white;
+    padding: 20px;
+    margin-top: 20px;
+}
+  
+  /* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
 }
 
 .dropdown {
@@ -174,11 +193,8 @@ footer {
     background-color: #ffcc00;
     color: #000;
     text-align: center;
-    padding: 10px;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
-    border-radius: 10px 10px 0 0;
+    padding: 20px;
+    bottom: 10px;
 }
 
 .newsletter {
