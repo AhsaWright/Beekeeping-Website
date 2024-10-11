@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In - Beekeeper Website</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="dropdown">
+            <button class="dropbtn">Menu</button>
+            <div class="dropdown-content">
+                <a href="index.html">Home</a>
+                <a href="about.html">About Me</a>
+                <a href="getStarted.html">Getting Started</a>
+                <a href="blog stuff/blog.html">Blog</a>
+                <a href="beeSearch.html">Bee Search</a>
+                <a href="donate.html">Donate</a>
+                <a href="newsLetter.html">Newsletter</a>
+                <a href="faq.html">FAQ</a>
+            </div>
+        </div>
+        <div class="search-container">
+            <input type="text" placeholder="Search...">
+        </div>
+        <a href="signin.html"><button class="sign-in-btn">Sign In</button></a>
+    </header>
+    
+    <main>
+        <h1>Sign In</h1>
+        <form id="signin-form">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+            
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+            
+            <button type="submit">Sign In</button>
+        </form>
+    </main>
+    
+    <footer>
+        <div class="newsletter">
+            <p>Sign up for our newsletter</p>
+            <input type="email" placeholder="Enter your email">
+            <button class="submit-btn">Submit</button>
+        </div>
+        <p>&copy; 2024 Beekeeper Website</p>
+    </footer>
+
+    <script src="signin.js"></script>
+</body>
+</html>
