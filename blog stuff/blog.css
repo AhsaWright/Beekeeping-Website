@@ -3,7 +3,11 @@ body {
     background-color: #fffbee;
     color: #333;
     margin: 0;
-    padding: 0;
+    padding: 0px 20px 0px 20px
+}
+
+body {
+    background: #f1f1f1;
 }
 
 header {
@@ -16,7 +20,7 @@ header {
 }
 
 main {
-    padding-bottom: 100px; /* Adjust the value as needed */
+    padding-bottom: 50px;
 }
 
 .dropdown {
@@ -94,7 +98,6 @@ footer {
     color: #000;
     text-align: center;
     padding: 10px;
-    position: fixed;
     width: 100%;
     bottom: 0;
 }
@@ -137,11 +140,6 @@ footer {
     box-sizing: border-box;
 }
   
-body {
-    font-family: Arial;
-    padding: 20px;
-    background: #f1f1f1;
-}
   
   /* Header/Blog Title */
 .header {
@@ -187,10 +185,4 @@ body {
 }
 
   
-  /* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
-  @media screen and (max-width: 800px) {
-    .leftcolumn, .rightcolumn {
-      width: 100%;
-      padding: 0;
-    }
-  }
+ 
