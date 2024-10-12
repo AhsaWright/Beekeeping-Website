@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Me</title>
+    <title>Bee Search</title>
     <link rel="stylesheet" href="styles.css">
-</html>
+</head>
 <body>
     <header>
         <div class="dropdown">
@@ -28,8 +28,55 @@
     </header>
 
     <main>
-        <!-- Add More Shit (tm)-->
+        <h1>Bee Search Time</h1>
+        <form action="/search" method="get" class="bee-search-form">
+            <!-- Color dropdown -->
+            <div class="form-group">
+                <label for="color">Color:</label>
+                <select id="color" name="color">
+                    <option value="">--Select a Color--</option>
+                    <option value="yellow">Yellow</option>
+                    <option value="black">Black</option>
+                    <option value="brown">Brown</option>
+                    <option value="orange">Orange</option>
+                    <option value="white">White</option>
+                    <option value="striped">Striped (Yellow/Black)</option>
+                </select>
+            </div>
+        
+            <!-- Region dropdown -->
+            <div class="form-group">
+                <label for="region">Region:</label>
+                <select id="region" name="region">
+                    <option value="">--Select a Region--</option>
+                    <option value="North America">North America</option>
+                    <option value="Europe">Europe</option>
+                    <option value="Asia">Asia</option>
+                    <option value="Africa">Africa</option>
+                    <option value="Australia">Australia</option>
+                    <option value="South America">South America</option>
+                </select>
+            </div>
+        
+            <!-- Size dropdown -->
+            <div class="form-group">
+                <label for="size">Size:</label>
+                <select id="size" name="size">
+                    <option value="">--Select Size--</option>
+                    <option value="small">Small</option>
+                    <option value="medium">Medium</option>
+                    <option value="large">Large</option>
+                </select>
+            </div>
+            
+            <button class="beeButton" type="submit">Search</button>
+        </form>
+
+        <!-- This is a div where results will appear -->
+        <div id="results"></div>
     </main>
+</body>
+</html>
 
     <footer>
         <div class="newsletter">
@@ -41,3 +88,4 @@
     </footer>
 
 </body>
+</html>

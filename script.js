@@ -8,7 +8,7 @@ function setProgress(percentage) {
     progressText.textContent = percentage + '% funded';
 }
 
-setProgress(90);
+setProgress(0);
 
 function scrollCarousel(direction) {
     const carouselImages = document.querySelector('.carousel-images');
@@ -25,4 +25,5 @@ function scrollCarousel(direction) {
 
     carouselImages.style.transform = 'translateX(-' + (currentIndex * imageWidth) + 'px)';
 }
+
 
