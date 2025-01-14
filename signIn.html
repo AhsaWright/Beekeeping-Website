@@ -48,5 +48,14 @@
 
     <script src="firebase-config.js"></script>
     <script src="auth.js"></script>
+    <script>
+        // Check if user is signed in
+        const user = JSON.parse(localStorage.getItem('user'))
+        if (user) {
+            document.getElementById('signin-form').style.display = 'none';
+            document.getElementById('user-info').style.display = 'block';
+            document.getElementByID('user-email').textContent = user.email;
+        }
+    </script>
 </body>
 </html>
