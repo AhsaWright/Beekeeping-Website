@@ -1,39 +1,11 @@
 // auth.js
 
-// Handle Signup
-document.getElementById('signup-form').addEventListener('submit', function(event) {
-    event.preventDefault();
-    const email = document.getElementById('email').value;
-    const password = document.getElementById('password').value;
-
-    console.log('Email:', email);
-    console.log('Password:', password);
-
-    firebase.auth().createUserWithEmailAndPassword(email, password)
-        .then((userCredential) => {
-            // Signed up
-            const user = userCredential.user;
-            console.log('User:', user);
-            alert('Signup successful!');
-            // Redirect to sign-in page
-            window.location.href = 'signin.html';
-        })
-        .catch((error) => {
-            const errorCode = error.code;
-            const errorMessage = error.message;
-            console.error('Error:', errorCode, errorMessage);
-            alert(`Error: ${errorMessage}`);
-        });
-});
-
 // Handle Sign-in
 document.getElementById('signin-form').addEventListener('submit', function(event) {
     event.preventDefault();
     const email = document.getElementById('email').value;
     const password = document.getElementById('password').value;
-
-    console.log('Email:', email);
-    console.log('Password:', password);
+    const errorMessage = document.getElementById('error-message');
 
     firebase.auth().signInWithEmailAndPassword(email, password)
         .then((userCredential) => {
@@ -41,17 +13,29 @@ document.getElementById('signin-form').addEventListener('submit', function(event
             const user = userCredential.user;
             console.log('User:', user);
             alert('Sign-in successful!');
-
-            //Store user information in local storage
-            localStorage.setItem('user', JSON.stringify(user));
-            
-            // Optionally, you can redirect the user to another page
-            // window.location.href = 'welcome.html';
+            // Redirect to blog page
+            window.location.href = 'blog.html';
         })
         .catch((error) => {
             const errorCode = error.code;
-            const errorMessage = error.message;
-            console.error('Error:', errorCode, errorMessage);
-            alert(`Error: ${errorMessage}`);
+            const errorMessageText = error.message;
+            console.error('Error:', errorCode, errorMessageText);
+            errorMessage.textContent = `Error: ${errorMessageText}`;
         });
+});
+
+// Check if user is logged in
+firebase.auth().onAuthStateChanged((user) => {
+    const signInButton = document.querySelector('.sign-in-btn');
+    if (user) {
+        signInButton.textContent = 'Sign Out';
+        signInButton.addEventListener('click', () => {
+            firebase.auth().signOut().then(() => {
+                window.location.href = 'index.html';
+            });
+        });
+    } else {
+        signInButton.textContent = 'Sign In';
+        signInButton.href = 'signIn.html';
+    }
 });
