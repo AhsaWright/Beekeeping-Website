@@ -41,6 +41,10 @@ document.getElementById('signin-form').addEventListener('submit', function(event
             const user = userCredential.user;
             console.log('User:', user);
             alert('Sign-in successful!');
+
+            //Store user information in local storage
+            localStorage.setItem('user', JSON.stringify(user));
+            
             // Optionally, you can redirect the user to another page
             // window.location.href = 'welcome.html';
         })
