@@ -58,3 +58,34 @@ UTF-8">
     <link rel="stylesheet" href="css/styles.css"
 ```
 
+# Code Citations
+
+## License: unknown
+https://github.com/Tr1ckSy/deshboard-consulta/tree/d930d5bcc2fd40b8c2ee1224f25cc39df3fd57ef/index.html
+
+```
+email = document.getElementById('email').value;
+    const password = document.getElementById('password').value;
+    const errorMessage = document.getElementById('error-message');
+
+    firebase.auth().signInWithEmailAndPassword(email, password)
+        .then
+```
+
+# Code Citations
+
+## License: unknown
+https://github.com/fed/modal-focus-trap/tree/89725809b532ee015f9c58debcbae5e9ed4579e0/src/utils.ts
+
+```
+& document.activeElement === firstElement) {
+            event.preventDefault();
+            lastElement.focus();
+        } else if (!event.shiftKey && document.activeElement === lastElement) {
+            event.preventDefault();
+            firstElement.focus();
+        }
+    }
+```
+
+

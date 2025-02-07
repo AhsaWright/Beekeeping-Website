@@ -39,3 +39,10 @@ firebase.auth().onAuthStateChanged((user) => {
         signInButton.href = 'signIn.html';
     }
 });
+
+
+function sanitizeInput(input) {
+    const tempElement = document.createElement('div');
+    tempElement.textContent = input;
+    return tempElement.innerHTML;
+}
